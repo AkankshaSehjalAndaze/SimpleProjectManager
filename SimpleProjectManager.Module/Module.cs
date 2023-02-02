@@ -22,6 +22,7 @@ public sealed class SimpleProjectManagerModule : ModuleBase {
 		// SimpleProjectManagerModule
 		// 
 		RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.SystemModule.SystemModule));
+        AdditionalExportedTypes.Add(typeof(Person));
     }
     public override IEnumerable<ModuleUpdater> GetModuleUpdaters(IObjectSpace objectSpace, Version versionFromDB) {
         ModuleUpdater updater = new DatabaseUpdate.Updater(objectSpace, versionFromDB);

@@ -9,6 +9,7 @@ using DevExpress.ExpressApp.Model.Core;
 using DevExpress.ExpressApp.Model.DomainLogics;
 using DevExpress.ExpressApp.Model.NodeGenerators;
 using DevExpress.Persistent.BaseImpl;
+using DevExpress.ExpressApp.Validation;
 
 namespace SimpleProjectManager.Blazor.Server;
 
@@ -16,6 +17,7 @@ namespace SimpleProjectManager.Blazor.Server;
 // For more typical usage scenarios, be sure to check out https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.ModuleBase.
 public sealed class SimpleProjectManagerBlazorModule : ModuleBase {
     public SimpleProjectManagerBlazorModule() {
+        RequiredModuleTypes.Add(typeof(ValidationModule));
     }
     public override IEnumerable<ModuleUpdater> GetModuleUpdaters(IObjectSpace objectSpace, Version versionFromDB) {
         return ModuleUpdater.EmptyModuleUpdaters;
