@@ -5,6 +5,7 @@ using System;
 
 namespace SimpleProjectManager.Module.BusinessObjects.Marketing
 {
+    // modification for issue 1
     [NavigationItem("Marketing")]
     public class Customer : BaseObject
     {
